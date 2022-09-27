@@ -4,7 +4,7 @@ ALL_ABC = 26
 T_ABC = 9
 K_ABC = 2
 ty = 2
-ABClist = ['A','B','C','D','E','F','G','H','I']
+ABClist = ['A','B','C','D','E','F','G','H','I','j','K','L','M','N','O','p','R','S','T','U','V','W','X','Y','Z']
 a = random.shuffle(ABClist)
 a = random.choice(ABClist)
 abclist = ''
@@ -19,3 +19,4 @@ if ans == a:
     print("正解です")
 else:
     print("残念")
+
