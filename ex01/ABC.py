@@ -11,7 +11,8 @@ abclist = ''
 for i in ABClist:
     if i != a:
         abclist = abclist+i
-print(abclist)
+print("対象文字:",ABClist)
+print("欠損文字:",abclist)
 
 ans = input("欠損文字は？")
 if ans == a:
