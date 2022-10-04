@@ -1,5 +1,4 @@
 import tkinter as tk
-import tkinter.messagebox as tkm
 from turtle import clear
 
 def click_number(event): # 練習3
@@ -18,8 +17,8 @@ def click_equal(event):
 root = tk.Tk() # 練習1
 root.geometry("300x700")
 
-button = tk.Button(text='C',command=clear)
-button.place(x=500,y=500,width=10,height=10)
+button = tk.Button(text='まだ押さないで',command=clear)
+button.place(x=500,y=500,width=20,height=30)
 
 def clear(event):
     entry.delete(0,tk.END)
@@ -46,11 +45,11 @@ for i, num in enumerate(numbers+operators+operators1+operators2+operators3, 1):
     if i%3 == 0:
         r += 1
         c = 0
-
+#Cボタン入力でオールクリア
 btn = tk.Button(root, text=f"C", font=("", 30), width=4, height=2)
 btn.bind("<1>", clear)
 btn.grid(row=r+1, column=c-2)
-
+#計算結果を出力
 btn = tk.Button(root, text=f"=", font=("", 30), width=4, height=2)
 btn.bind("<1>", click_equal)
 btn.grid(row=r, column=c)
