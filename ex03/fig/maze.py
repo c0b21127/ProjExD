@@ -1,7 +1,6 @@
 from cgitb import reset
 import tkinter as tk
 from turtle import clear
-import random
 import maze_maker as mm # 練習8
 
 # 練習5
@@ -36,23 +35,23 @@ def main_proc():
     global cx, cy
     if key == "Up":
         my -= 1
-    if key =="w":
+    if key =="w": #壁貫通機能
         my -= 1    
     if key == "Down":
         my += 1
-    if key == "s":
+    if key == "s": #壁貫通機能
         my += 1
     if key == "Left":
         mx -= 1
-    if key == "a":
+    if key == "a": #壁貫通機能
         mx -= 1
     if key == "Right":
         mx += 1
-    if key == "d":
+    if key == "d": #壁貫通機能
         mx +=1
     if key == "s": #ｓキーを押したら開始
         search_left
-    if key == "r":
+    if key == "enter":
         reset
     if maze_lst[my][mx] == 0: # 床なら
         cx, cy = mx*100+50, my*100+50
