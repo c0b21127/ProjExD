@@ -96,9 +96,9 @@ def main():
         for event in pg.event.get(): # 練習2
             if event.type == pg.QUIT:
                 return
-            if event.key == pg.K_f:
+            if event.key == pg.K_f:  #fボタンを押すとフルスクリーン化　追加機能
                 if not fullscreen:
-                    print("Changing to FULLSCREEN")
+                    print("Changing to FULLSCREEN")  
                     screen_backup = screen.copy()
                     screen = pg.display.set_mode(
                     SCREENRECT.size, winstyle | pg.FULLSCREEN, bestdepth)
